@@ -1,0 +1,37 @@
+[
+    {
+        "id": "15",
+        "mid": "15",
+        "description": "Outside Donnelly West entrance ",
+        "Latitude": "41.72098",
+        "Longitude": "-73.933027"
+    },
+    {
+        "id": "16",
+        "mid": "16",
+        "description": "North of Donnelly",
+        "Latitude": "41.721247",
+        "Longitude": "-73.932518"
+    },
+    {
+        "id": "17",
+        "mid": "17",
+        "description": "In between Donnelly and Marian ",
+        "Latitude": "41.721058",
+        "Longitude": "-73.933651"
+    },
+    {
+        "id": "18",
+        "mid": "18",
+        "description": "North of Marian ",
+        "Latitude": "41.7213",
+        "Longitude": "-73.934447"
+    },
+    {
+        "id": "19",
+        "mid": "19",
+        "description": "West of Donnelly, south of sidewalk to champ",
+        "Latitude": "41.720551",
+        "Longitude": "-73.933435"
+    }
+]
