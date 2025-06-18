@@ -1,12 +1,19 @@
 using UnityEngine;
 using System.IO;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GPSPointLoader : MonoBehaviour
 {
     public List<GPSPoint> gpsPoints = new List<GPSPoint>();
+    public static GPSPointLoader Instance { get; private set; }
 
     void Start()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
         LoadGPSPoints();
     }
 
@@ -20,7 +27,7 @@ public class GPSPointLoader : MonoBehaviour
             string jsonString = File.ReadAllText(filePath);
             try
             {
-                // Wrap the JSON in a container class if needed (if you're using an array at the top level, see below)
+                // Wrap the JSON in a container class
                 GPSPointList pointList = JsonUtility.FromJson<GPSPointList>(FixJson(jsonString));
                 gpsPoints = new List<GPSPoint>(pointList.points);
                 Debug.Log($"Loaded {gpsPoints.Count} GPS points.");

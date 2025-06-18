@@ -6,17 +6,16 @@ using System.IO;
 using System.Collections;
 
 [System.Serializable]
-public class GPSPoint
+public class GPSLoc
 {
     public double latitude;
     public double longitude;
     public double altitude;
 }
 
-[System.Serializable]
-public class GPSPointList
+public class GPSLocList
 {
-    public List<GPSPoint> points = new List<GPSPoint>();
+    public List<GPSLoc> points = new List<GPSLoc>();
 }
 
 //PlacedPrefab is the object (marker)
@@ -37,7 +36,7 @@ public class PlaceAndSaveWithGPS : MonoBehaviour
     ARRaycastManager aRRaycastManager;
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    GPSPointList savedPoints = new GPSPointList();
+    GPSLocList savedPoints = new GPSLocList();
 
     //Start location tracking once program boots -> initialize
     void Awake()
@@ -83,7 +82,7 @@ public class PlaceAndSaveWithGPS : MonoBehaviour
 
             // Save GPS at this point
             var gps = Input.location.lastData;
-            savedPoints.points.Add(new GPSPoint
+            savedPoints.points.Add(new GPSLoc
             {
                 latitude = gps.latitude,
                 longitude = gps.longitude,
