@@ -1,0 +1,1842 @@
+[
+    {
+        "id": "63",
+        "name": "Enclosure 63",
+        "gps_coordinates": {
+            "latitude": 41.7238889,
+            "longitude": -73.9274167
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "62",
+        "name": "Enclosure 62",
+        "gps_coordinates": {
+            "latitude": 41.7219444,
+            "longitude": -73.9312222
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "61",
+        "name": "Enclosure 61",
+        "gps_coordinates": {
+            "latitude": 41.7216667,
+            "longitude": -73.9311389
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "60",
+        "name": "Enclosure 60",
+        "gps_coordinates": {
+            "latitude": 41.7206452,
+            "longitude": -73.9305946
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 5"
+            ],
+            "South": [
+                "Conduit 5"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "59",
+        "name": "Enclosure 59",
+        "gps_coordinates": {
+            "latitude": 41.7225556,
+            "longitude": -73.9286111
+        },
+        "directions": {
+            "North": [
+                "Conduit 1"
+            ],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "58",
+        "name": "Enclosure 58",
+        "gps_coordinates": {
+            "latitude": 41.7218889,
+            "longitude": -73.9303056
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "57",
+        "name": "Enclosure 57",
+        "gps_coordinates": {
+            "latitude": 41.7219167,
+            "longitude": -73.9303056
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "56",
+        "name": "Enclosure 56",
+        "gps_coordinates": {
+            "latitude": 41.7230556,
+            "longitude": -73.92875
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "55",
+        "name": "Enclosure 55",
+        "gps_coordinates": {
+            "latitude": 41.7221111,
+            "longitude": -73.9280833
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 45",
+                "Conduit 6",
+                "Conduit 7",
+                "Conduit 8"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "54",
+        "name": "Enclosure 54",
+        "gps_coordinates": {
+            "latitude": 41.7199444,
+            "longitude": -73.93325
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "53",
+        "name": "Enclosure 53",
+        "gps_coordinates": {
+            "latitude": 41.7272222,
+            "longitude": -73.935
+        },
+        "directions": {
+            "North": [
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "52",
+        "name": "Enclosure 52",
+        "gps_coordinates": {
+            "latitude": 41.72675,
+            "longitude": -73.9331944
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "South": [],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 7",
+                "Conduit 8"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "51",
+        "name": "Enclosure 51",
+        "gps_coordinates": {
+            "latitude": 41.72675,
+            "longitude": -73.9331944
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "50",
+        "name": "Enclosure 50",
+        "gps_coordinates": {
+            "latitude": 41.7263611,
+            "longitude": -73.9330278
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "49",
+        "name": "Enclosure 49",
+        "gps_coordinates": {
+            "latitude": 41.7206667,
+            "longitude": -73.9381944
+        },
+        "directions": {
+            "North": [
+                "Conduit 1"
+            ],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "48",
+        "name": "Enclosure 48",
+        "gps_coordinates": {
+            "latitude": 41.7206111,
+            "longitude": -73.9378056
+        },
+        "directions": {
+            "North": [
+                "Conduit 1"
+            ],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "47",
+        "name": "Enclosure 47",
+        "gps_coordinates": {
+            "latitude": 41.7211944,
+            "longitude": -73.9377222
+        },
+        "directions": {
+            "North": [
+                "Conduit 1"
+            ],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "46",
+        "name": "Enclosure 46",
+        "gps_coordinates": {
+            "latitude": 41.7213562,
+            "longitude": -73.9381447
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [
+                "Conduit 1"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 4",
+                "Conduit 3"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "45",
+        "name": "Enclosure 45",
+        "gps_coordinates": {
+            "latitude": 41.7221547,
+            "longitude": -73.937587
+        },
+        "directions": {
+            "North": [
+                "Conduit 1"
+            ],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "44",
+        "name": "Enclosure 44",
+        "gps_coordinates": {
+            "latitude": 41.7221227,
+            "longitude": -73.9373882
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "43",
+        "name": "Enclosure 43",
+        "gps_coordinates": {
+            "latitude": 41.72225,
+            "longitude": -73.9370278
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "42",
+        "name": "Enclosure 42",
+        "gps_coordinates": {
+            "latitude": 41.7224329,
+            "longitude": -73.9343031
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 3"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "41",
+        "name": "Enclosure 41",
+        "gps_coordinates": {
+            "latitude": 41.7256429,
+            "longitude": -73.9353249
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "40",
+        "name": "Enclosure 40",
+        "gps_coordinates": {
+            "latitude": 41.7243056,
+            "longitude": -73.9324444
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "39",
+        "name": "Enclosure 39",
+        "gps_coordinates": {
+            "latitude": 41.7219167,
+            "longitude": -73.9304722
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "East": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northeast": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northwest": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "38",
+        "name": "Enclosure 38",
+        "gps_coordinates": {
+            "latitude": 41.722,
+            "longitude": -73.9294167
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "West": [
+                "Conduit 5",
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "37",
+        "name": "Enclosure 37",
+        "gps_coordinates": {
+            "latitude": 41.7221944,
+            "longitude": -73.9270278
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "36",
+        "name": "Enclosure 36",
+        "gps_coordinates": {
+            "latitude": 41.7221944,
+            "longitude": -73.9270278
+        },
+        "directions": {
+            "North": [
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [
+                "Conduit 3",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 7",
+                "Conduit 8"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "35",
+        "name": "Enclosure 35",
+        "gps_coordinates": {
+            "latitude": 41.7221944,
+            "longitude": -73.9270278
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "34",
+        "name": "Enclosure 34",
+        "gps_coordinates": {
+            "latitude": 41.7221944,
+            "longitude": -73.9270278
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "33",
+        "name": "Enclosure 33",
+        "gps_coordinates": {
+            "latitude": 41.7199602,
+            "longitude": -73.9313086
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 2",
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "32",
+        "name": "Enclosure 32",
+        "gps_coordinates": {
+            "latitude": 41.7199602,
+            "longitude": -73.9313086
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 2",
+                "Conduit 1"
+            ],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "31",
+        "name": "Enclosure 31",
+        "gps_coordinates": {
+            "latitude": 41.7199602,
+            "longitude": -73.9313086
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 1"
+            ],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "30",
+        "name": "Enclosure 30",
+        "gps_coordinates": {
+            "latitude": 41.7206389,
+            "longitude": -73.9300278
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "29",
+        "name": "Enclosure 29",
+        "gps_coordinates": {
+            "latitude": 41.7206069,
+            "longitude": -73.9340189
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1"
+            ],
+            "East": [],
+            "West": [
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "28",
+        "name": "Enclosure 28",
+        "gps_coordinates": {
+            "latitude": 41.7197981,
+            "longitude": -73.9374522
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 3",
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "27",
+        "name": "Enclosure 27",
+        "gps_coordinates": {
+            "latitude": 41.7197981,
+            "longitude": -73.9374522
+        },
+        "directions": {
+            "North": [
+                "Conduit 1"
+            ],
+            "South": [
+                "Conduit 4",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "26",
+        "name": "Enclosure 26",
+        "gps_coordinates": {
+            "latitude": 41.7197981,
+            "longitude": -73.9374522
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 3",
+                "Conduit 2"
+            ],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "25",
+        "name": "Enclosure 25",
+        "gps_coordinates": {
+            "latitude": 41.7199885,
+            "longitude": -73.9361737
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "24",
+        "name": "Enclosure 24",
+        "gps_coordinates": {
+            "latitude": 41.7199885,
+            "longitude": -73.9361737
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 1"
+            ],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "23",
+        "name": "Enclosure 23",
+        "gps_coordinates": {
+            "latitude": 41.7197469,
+            "longitude": -73.9361357
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 7",
+                "Conduit 8",
+                "Conduit 9"
+            ],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6"
+            ],
+            "East": [],
+            "West": [
+                "Conduit 3",
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "22",
+        "name": "Enclosure 22",
+        "gps_coordinates": {
+            "latitude": 41.7197469,
+            "longitude": -73.9361357
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 2",
+                "Conduit 5",
+                "Conduit 6"
+            ],
+            "West": [
+                "Conduit 2",
+                "Conduit 1",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "21",
+        "name": "Enclosure 21",
+        "gps_coordinates": {
+            "latitude": 41.7197469,
+            "longitude": -73.9361357
+        },
+        "directions": {
+            "North": [
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 2",
+                "Conduit 1"
+            ],
+            "South": [],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "20",
+        "name": "Enclosure 20",
+        "gps_coordinates": {
+            "latitude": 41.7199722,
+            "longitude": -73.93525
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 2",
+                "Conduit 1",
+                "Conduit 3"
+            ],
+            "West": [
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "19",
+        "name": "Enclosure 19",
+        "gps_coordinates": {
+            "latitude": 41.7199722,
+            "longitude": -73.93525
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "18B",
+        "name": "Enclosure 18B",
+        "gps_coordinates": {
+            "latitude": 41.7199722,
+            "longitude": -73.93525
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "18A",
+        "name": "Enclosure 18A",
+        "gps_coordinates": {
+            "latitude": 41.7203542,
+            "longitude": -73.93496
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 1"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "18",
+        "name": "Enclosure 18",
+        "gps_coordinates": {
+            "latitude": 41.7203542,
+            "longitude": -73.93496
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "West": [
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "17",
+        "name": "Enclosure 17",
+        "gps_coordinates": {
+            "latitude": 41.7203542,
+            "longitude": -73.93496
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 5"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "16",
+        "name": "Enclosure 16",
+        "gps_coordinates": {
+            "latitude": 41.7210351,
+            "longitude": -73.9351259
+        },
+        "directions": {
+            "North": [
+                "Conduit 8",
+                "Conduit 10",
+                "Conduit 11",
+                "Conduit 12"
+            ],
+            "South": [
+                "Conduit 2",
+                "Conduit 1",
+                "Conduit 3"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "15",
+        "name": "Enclosure 15",
+        "gps_coordinates": {
+            "latitude": 41.7210351,
+            "longitude": -73.9351259
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 4",
+                "Conduit 1"
+            ],
+            "East": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "14",
+        "name": "Enclosure 14",
+        "gps_coordinates": {
+            "latitude": 41.7225159,
+            "longitude": -73.9345262
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 3",
+                "Conduit 2",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 9",
+                "Conduit 10",
+                "Conduit 7",
+                "Conduit 8"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "13",
+        "name": "Enclosure 13",
+        "gps_coordinates": {
+            "latitude": 41.7225159,
+            "longitude": -73.9345262
+        },
+        "directions": {
+            "North": [
+                "Conduit 3",
+                "Conduit 8",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 9",
+                "Conduit 10",
+                "Conduit 11",
+                "Conduit 12",
+                "Conduit 13"
+            ],
+            "South": [
+                "Conduit 4",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 11",
+                "Conduit 12"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "12",
+        "name": "Enclosure 12",
+        "gps_coordinates": {
+            "latitude": 41.7225159,
+            "longitude": -73.9345262
+        },
+        "directions": {
+            "North": [
+                "Conduit 9",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "South": [
+                "Conduit 8",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "11",
+        "name": "Enclosure 11",
+        "gps_coordinates": {
+            "latitude": 41.7230397,
+            "longitude": -73.9355214
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 3",
+                "Conduit 2"
+            ],
+            "East": [
+                "Conduit 5",
+                "Conduit 6",
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "10",
+        "name": "Enclosure 10",
+        "gps_coordinates": {
+            "latitude": 41.7247443,
+            "longitude": -73.9349154
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 1",
+                "Conduit 3"
+            ],
+            "East": [
+                "Conduit 10",
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "09",
+        "name": "Enclosure 09",
+        "gps_coordinates": {
+            "latitude": 41.7223826,
+            "longitude": -73.9373268
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "08",
+        "name": "Enclosure 08",
+        "gps_coordinates": {
+            "latitude": 41.7223826,
+            "longitude": -73.9373268
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "07",
+        "name": "Enclosure 07",
+        "gps_coordinates": {
+            "latitude": 41.7223826,
+            "longitude": -73.9373268
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 4",
+                "Conduit 1",
+                "Conduit 2"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "06",
+        "name": "Enclosure 06",
+        "gps_coordinates": {
+            "latitude": 41.7238825,
+            "longitude": -73.9364847
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 9"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "05",
+        "name": "Enclosure 05",
+        "gps_coordinates": {
+            "latitude": 41.7238825,
+            "longitude": -73.9364847
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 3"
+            ],
+            "East": [
+                "Conduit 1"
+            ],
+            "West": [],
+            "Northeast": [
+                "Conduit 1"
+            ],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": [
+                "Conduit 1",
+                "Conduit 2"
+            ]
+        },
+        "notes": ""
+    },
+    {
+        "id": "04",
+        "name": "Enclosure 04",
+        "gps_coordinates": {
+            "latitude": 41.7252966,
+            "longitude": -73.9362997
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 3"
+            ],
+            "East": [
+                "Conduit 1",
+                "Conduit 3",
+                "Conduit 2"
+            ],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "03A",
+        "name": "Enclosure 03A",
+        "gps_coordinates": {
+            "latitude": 41.7252966,
+            "longitude": -73.9362997
+        },
+        "directions": {
+            "North": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "East": [],
+            "West": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "03",
+        "name": "Enclosure 03",
+        "gps_coordinates": {
+            "latitude": 41.7252966,
+            "longitude": -73.9362997
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "Northwest": [
+                "Conduit 3",
+                "Conduit 4",
+                "Conduit 5",
+                "Conduit 6"
+            ],
+            "Southeast": [],
+            "Southwest": [
+                "Conduit 1",
+                "Conduit 3",
+                "Conduit 2"
+            ]
+        },
+        "notes": ""
+    },
+    {
+        "id": "02",
+        "name": "Enclosure 02",
+        "gps_coordinates": {
+            "latitude": 41.726444,
+            "longitude": -73.9360956
+        },
+        "directions": {
+            "North": [],
+            "South": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "East": [
+                "Conduit 1",
+                "Conduit 2",
+                "Conduit 3",
+                "Conduit 4"
+            ],
+            "West": [
+                "Conduit 1"
+            ],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": ""
+    },
+    {
+        "id": "V1",
+        "name": "Enclosure V1",
+        "gps_coordinates": {
+            "latitude": 41.72124,
+            "longitude": -73.931269
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "North road side of steel plant"
+    },
+    {
+        "id": "V2",
+        "name": "Enclosure V2",
+        "gps_coordinates": {
+            "latitude": 41.720416,
+            "longitude": -73.931113
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "Where W Cedar Street meets North Road"
+    },
+    {
+        "id": "V3",
+        "name": "Enclosure V3",
+        "gps_coordinates": {
+            "latitude": 41.722824,
+            "longitude": -73.92929
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "Behind Fulton Block 15"
+    },
+    {
+        "id": "V4",
+        "name": "Enclosure V4",
+        "gps_coordinates": {
+            "latitude": 41.722648,
+            "longitude": -73.930459
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "East of Beck Lot"
+    },
+    {
+        "id": "V5",
+        "name": "Enclosure V5",
+        "gps_coordinates": {
+            "latitude": 41.72283,
+            "longitude": -73.932121
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "North of trail and East of North Road"
+    },
+    {
+        "id": "N1",
+        "name": "Enclosure N1",
+        "gps_coordinates": {
+            "latitude": 41.72236,
+            "longitude": -73.934075
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "North of Library"
+    },
+    {
+        "id": "N2",
+        "name": "Enclosure N2",
+        "gps_coordinates": {
+            "latitude": 41.721344,
+            "longitude": -73.934808
+        },
+        "directions": {
+            "North": [],
+            "South": [],
+            "East": [],
+            "West": [],
+            "Northeast": [],
+            "Northwest": [],
+            "Southeast": [],
+            "Southwest": []
+        },
+        "notes": "Southern Part of Campus Green"
+    }
+]
