@@ -1,0 +1,106 @@
+{
+  "zone": "EastCampus",
+  "conduits": [
+    {
+      "name": "Line 25",
+      "segment": [
+        {
+          "lat": 41.721451,
+          "lng": -73.926359,
+          "notes": ""
+        },
+        {
+          "lat": 41.721337,
+          "lng": -73.926662,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 25
+    },
+    {
+      "name": "Line 26",
+      "segment": [
+        {
+          "lat": 41.721091,
+          "lng": -73.926603,
+          "notes": ""
+        },
+        {
+          "lat": 41.72075,
+          "lng": -73.926544,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 26
+    },
+    {
+      "name": "Line 27",
+      "segment": [
+        {
+          "lat": 41.721045,
+          "lng": -73.925817,
+          "notes": ""
+        },
+        {
+          "lat": 41.720937,
+          "lng": -73.925804,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 27
+    },
+    {
+      "name": "Line 28",
+      "segment": [
+        {
+          "lat": 41.720672,
+          "lng": -73.925755,
+          "notes": ""
+        },
+        {
+          "lat": 41.72057,
+          "lng": -73.925841,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 28
+    },
+    {
+      "name": "Line 29",
+      "segment": [
+        {
+          "lat": 41.72049,
+          "lng": -73.926174,
+          "notes": ""
+        },
+        {
+          "lat": 41.720502,
+          "lng": -73.926498,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 29
+    }
+  ],
+  "manholes": [
+    {
+      "id": "34",
+      "mid": "34",
+      "description": "Southwest of Upper West Cedar",
+      "Latitude": "41.720182",
+      "Longitude": "-73.926908"
+    },
+    {
+      "id": "35",
+      "mid": "35",
+      "description": "Northeast of Upper West",
+      "Latitude": "41.721385",
+      "Longitude": "-73.925884"
+    }
+  ]
+}

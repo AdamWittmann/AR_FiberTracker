@@ -1,0 +1,139 @@
+{
+  "zone": "UpperCampus",
+  "conduits": [
+    {
+      "name": "Line 14",
+      "segment": [
+        {
+          "lat": 41.725215,
+          "lng": -73.933562,
+          "notes": ""
+        },
+        {
+          "lat": 41.725305,
+          "lng": -73.933622,
+          "notes": ""
+        },
+        {
+          "lat": 41.725305,
+          "lng": -73.933622,
+          "notes": ""
+        },
+        {
+          "lat": 41.725453,
+          "lng": -73.93388,
+          "notes": ""
+        },
+        {
+          "lat": 41.725453,
+          "lng": -73.93388,
+          "notes": ""
+        },
+        {
+          "lat": 41.72634,
+          "lng": -73.934044,
+          "notes": ""
+        },
+        {
+          "lat": 41.72634,
+          "lng": -73.934044,
+          "notes": ""
+        },
+        {
+          "lat": 41.726507,
+          "lng": -73.93388,
+          "notes": ""
+        },
+        {
+          "lat": 41.726507,
+          "lng": -73.93388,
+          "notes": ""
+        },
+        {
+          "lat": 41.726495,
+          "lng": -73.933674,
+          "notes": ""
+        },
+        {
+          "lat": 41.726495,
+          "lng": -73.933674,
+          "notes": ""
+        },
+        {
+          "lat": 41.726546,
+          "lng": -73.933053,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 14
+    },
+    {
+      "name": "Line 15",
+      "segment": [
+        {
+          "lat": 41.726495,
+          "lng": -73.933674,
+          "notes": ""
+        },
+        {
+          "lat": 41.726745,
+          "lng": -73.933734,
+          "notes": ""
+        },
+        {
+          "lat": 41.72685,
+          "lng": -73.93378,
+          "notes": ""
+        },
+        {
+          "lat": 41.72679,
+          "lng": -73.9332,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 15
+    },
+    {
+      "name": "Line 46",
+      "segment": [
+        {
+          "lat": 41.725638,
+          "lng": -73.932532,
+          "notes": ""
+        },
+        {
+          "lat": 41.7264,
+          "lng": -73.93285,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 46
+    }
+  ],
+  "manholes": [
+    {
+      "id": "0",
+      "mid": "41",
+      "description": "Behind Fontaine",
+      "Latitude": "41.725638",
+      "Longitude": "-73.932532"
+    },
+    {
+      "id": "50",
+      "mid": "45",
+      "description": "Confirm the location of this enclosure",
+      "Latitude": "41.72640",
+      "Longitude": "-73.93285"
+    },
+    {
+      "id": "52",
+      "mid": "52",
+      "description": "",
+      "Latitude": "41.72679",
+      "Longitude": "-73.93320"
+    }
+  ]
+}

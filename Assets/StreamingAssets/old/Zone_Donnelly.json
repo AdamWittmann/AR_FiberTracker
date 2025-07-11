@@ -1,0 +1,126 @@
+{
+  "zone": "Donnelly",
+  "conduits": [
+    {
+      "name": "Line 35",
+      "segment": [
+        {
+          "lat": 41.720616,
+          "lng": -73.929902,
+          "notes": ""
+        },
+        {
+          "lat": 41.720738,
+          "lng": -73.930224,
+          "notes": ""
+        },
+        {
+          "lat": 41.719779,
+          "lng": -73.930795,
+          "notes": ""
+        },
+        {
+          "lat": 41.720418,
+          "lng": -73.931117,
+          "notes": ""
+        },
+        {
+          "lat": 41.721231,
+          "lng": -73.931265,
+          "notes": ""
+        },
+        {
+          "lat": 41.720859,
+          "lng": -73.931608,
+          "notes": ""
+        },
+        {
+          "lat": 41.720842,
+          "lng": -73.93211,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 35
+    },
+    {
+      "name": "Line 45",
+      "segment": [
+        {
+          "lat": 41.7219,
+          "lng": -73.9305,
+          "notes": ""
+        },
+        {
+          "lat": 41.721919,
+          "lng": -73.930688,
+          "notes": ""
+        },
+        {
+          "lat": 41.721914,
+          "lng": -73.93104,
+          "notes": ""
+        },
+        {
+          "lat": 41.72199,
+          "lng": -73.93137,
+          "notes": ""
+        },
+        {
+          "lat": 41.72201,
+          "lng": -73.93162,
+          "notes": ""
+        },
+        {
+          "lat": 41.72204,
+          "lng": -73.93217,
+          "notes": ""
+        },
+        {
+          "lat": 41.722019,
+          "lng": -73.932768,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 45
+    }
+  ],
+  "manholes": [
+    {
+      "id": "14",
+      "mid": "14",
+      "description": "South of Saint Peter's",
+      "Latitude": "41.722019",
+      "Longitude": "-73.932768"
+    },
+    {
+      "id": "16",
+      "mid": "16",
+      "description": "North of Donnelly",
+      "Latitude": "41.721247",
+      "Longitude": "-73.932518"
+    },
+    {
+      "id": "29",
+      "mid": "29",
+      "description": "East of Donnelly and slightly West of North Rd",
+      "Latitude": "41.720856",
+      "Longitude": "-73.931612"
+    },
+    {
+      "id": "40",
+      "mid": "V1",
+      "description": "North road side of steel plant",
+      "Latitude": "41.72124",
+      "Longitude": "-73.931269"
+    },
+    {
+      "id": "41",
+      "mid": "V2",
+      "description": "Where W Cedar Street meets North Road",
+      "Latitude": "41.720416",
+      "Longitude": "-73.931113"
+    }
+  ]
+}

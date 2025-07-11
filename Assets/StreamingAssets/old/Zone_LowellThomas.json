@@ -1,0 +1,116 @@
+{
+  "zone": "LowellThomas",
+  "conduits": [
+    {
+      "name": "Line 4",
+      "segment": [
+        {
+          "lat": 41.722016,
+          "lng": -73.932774,
+          "notes": ""
+        },
+        {
+          "lat": 41.721976,
+          "lng": -73.933413,
+          "notes": ""
+        },
+        {
+          "lat": 41.722064,
+          "lng": -73.93344,
+          "notes": ""
+        },
+        {
+          "lat": 41.72206,
+          "lng": -73.933579,
+          "notes": ""
+        },
+        {
+          "lat": 41.721972,
+          "lng": -73.933611,
+          "notes": ""
+        },
+        {
+          "lat": 41.722004,
+          "lng": -73.934105,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 4
+    },
+    {
+      "name": "Line 9",
+      "segment": [
+        {
+          "lat": 41.721605,
+          "lng": -73.935742,
+          "notes": ""
+        },
+        {
+          "lat": 41.722248,
+          "lng": -73.935837,
+          "notes": ""
+        },
+        {
+          "lat": 41.722248,
+          "lng": -73.935837,
+          "notes": ""
+        },
+        {
+          "lat": 41.722949,
+          "lng": -73.935561,
+          "notes": ""
+        },
+        {
+          "lat": 41.722949,
+          "lng": -73.935561,
+          "notes": ""
+        },
+        {
+          "lat": 41.723624,
+          "lng": -73.934657,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 9
+    }
+  ],
+  "manholes": [
+    {
+      "id": "8",
+      "mid": "8",
+      "description": "Northeast of Midrise Parking Lot",
+      "Latitude": "41.722244",
+      "Longitude": "-73.935824"
+    },
+    {
+      "id": "9",
+      "mid": "9",
+      "description": "North of Midrise",
+      "Latitude": "41.721711",
+      "Longitude": "-73.935738"
+    },
+    {
+      "id": "18",
+      "mid": "18",
+      "description": "North of Marian ",
+      "Latitude": "41.7213",
+      "Longitude": "-73.934447"
+    },
+    {
+      "id": "45",
+      "mid": "N1",
+      "description": "North of Library",
+      "Latitude": "41.72236",
+      "Longitude": "-73.934075"
+    },
+    {
+      "id": "46",
+      "mid": "N2",
+      "description": "Southern Part of Campus Green",
+      "Latitude": "41.721344",
+      "Longitude": "-73.934808"
+    }
+  ]
+}

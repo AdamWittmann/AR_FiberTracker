@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ff9a291a9491748aed9318679b4340, type: 3}
+  m_Name: Northmost_20250709_114645
+  m_EditorClassIdentifier: 
+  pointOfInterests:
+  - {fileID: 11400000, guid: 59084a94fac434c6ea18ac6e5a187eef, type: 2}
+  - {fileID: 11400000, guid: 0199ce8a9035f4d6a8a2d7f891d3f383, type: 2}
+  - {fileID: 11400000, guid: 63f27588b40e84c02ae4a2775f02bca3, type: 2}

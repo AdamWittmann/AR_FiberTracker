@@ -1,0 +1,171 @@
+{
+  "zone": "Fontaine",
+  "conduits": [
+    {
+      "name": "Line 10",
+      "segment": [
+        {
+          "lat": 41.722286,
+          "lng": -73.934157,
+          "notes": ""
+        },
+        {
+          "lat": 41.723148,
+          "lng": -73.934493,
+          "notes": ""
+        },
+        {
+          "lat": 41.723148,
+          "lng": -73.934493,
+          "notes": ""
+        },
+        {
+          "lat": 41.723418,
+          "lng": -73.934976,
+          "notes": ""
+        },
+        {
+          "lat": 41.723418,
+          "lng": -73.934976,
+          "notes": ""
+        },
+        {
+          "lat": 41.723814,
+          "lng": -73.935319,
+          "notes": ""
+        },
+        {
+          "lat": 41.723814,
+          "lng": -73.935319,
+          "notes": ""
+        },
+        {
+          "lat": 41.72391,
+          "lng": -73.935474,
+          "notes": ""
+        },
+        {
+          "lat": 41.72391,
+          "lng": -73.935474,
+          "notes": ""
+        },
+        {
+          "lat": 41.724643,
+          "lng": -73.934785,
+          "notes": ""
+        },
+        {
+          "lat": 41.724643,
+          "lng": -73.934785,
+          "notes": ""
+        },
+        {
+          "lat": 41.72499,
+          "lng": -73.934294,
+          "notes": ""
+        },
+        {
+          "lat": 41.72499,
+          "lng": -73.934294,
+          "notes": ""
+        },
+        {
+          "lat": 41.725215,
+          "lng": -73.933587,
+          "notes": ""
+        },
+        {
+          "lat": 41.724315,
+          "lng": -73.933036,
+          "notes": ""
+        },
+        {
+          "lat": 41.724315,
+          "lng": -73.933036,
+          "notes": ""
+        },
+        {
+          "lat": 41.724,
+          "lng": -73.932476,
+          "notes": ""
+        },
+        {
+          "lat": 41.724,
+          "lng": -73.932476,
+          "notes": ""
+        },
+        {
+          "lat": 41.72355,
+          "lng": -73.93258,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 10
+    },
+    {
+      "name": "Line 11",
+      "segment": [
+        {
+          "lat": 41.724643,
+          "lng": -73.934785,
+          "notes": ""
+        },
+        {
+          "lat": 41.724315,
+          "lng": -73.934759,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 11
+    },
+    {
+      "name": "Line 12",
+      "segment": [
+        {
+          "lat": 41.72499,
+          "lng": -73.934294,
+          "notes": ""
+        },
+        {
+          "lat": 41.724836,
+          "lng": -73.934337,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 12
+    }
+  ],
+  "manholes": [
+    {
+      "id": "3",
+      "mid": "3",
+      "description": "Behind Foy Block C",
+      "Latitude": "41.725215",
+      "Longitude": "-73.933584"
+    },
+    {
+      "id": "4",
+      "mid": "4",
+      "description": "Behind Foy Block B",
+      "Latitude": "41.72499",
+      "Longitude": "-73.934294"
+    },
+    {
+      "id": "5",
+      "mid": "5",
+      "description": "Behind Foy Block A",
+      "Latitude": "41.724641",
+      "Longitude": "-73.934786"
+    },
+    {
+      "id": "10",
+      "mid": "10",
+      "description": "North of Dyson",
+      "Latitude": "41.724324",
+      "Longitude": "-73.933035"
+    }
+  ]
+}

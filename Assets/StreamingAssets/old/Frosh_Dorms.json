@@ -1,0 +1,169 @@
+{
+  "zone": "Dyson",
+  "conduits": [
+    {
+      "name": "Line 5",
+      "segment": [
+        {
+          "lat": 41.719931,
+          "lng": -73.935389,
+          "notes": ""
+        },
+        {
+          "lat": 41.719987,
+          "lng": -73.935958,
+          "notes": ""
+        },
+        {
+          "lat": 41.720167,
+          "lng": -73.935915,
+          "notes": ""
+        },
+        {
+          "lat": 41.720296,
+          "lng": -73.935781,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 5
+    },
+    {
+      "name": "Line 6",
+      "segment": [
+        {
+          "lat": 41.71952,
+          "lng": -73.935949,
+          "notes": ""
+        },
+        {
+          "lat": 41.719108,
+          "lng": -73.935944,
+          "notes": ""
+        },
+        {
+          "lat": 41.71952,
+          "lng": -73.935949,
+          "notes": ""
+        },
+        {
+          "lat": 41.719432,
+          "lng": -73.936131,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 6
+    },
+    {
+      "name": "Line 7",
+      "segment": [
+        {
+          "lat": 41.719564,
+          "lng": -73.936217,
+          "notes": ""
+        },
+        {
+          "lat": 41.719808,
+          "lng": -73.936705,
+          "notes": ""
+        },
+        {
+          "lat": 41.720004,
+          "lng": -73.9367,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 7
+    },
+    {
+      "name": "Line 48",
+      "segment": [
+        {
+          "lat": 41.7205,
+          "lng": -73.93571,
+          "notes": ""
+        },
+        {
+          "lat": 41.72051,
+          "lng": -73.93613,
+          "notes": ""
+        },
+        {
+          "lat": 41.72046,
+          "lng": -73.93642,
+          "notes": ""
+        },
+        {
+          "lat": 41.72046,
+          "lng": -73.9367,
+          "notes": ""
+        },
+        {
+          "lat": 41.72049,
+          "lng": -73.93674,
+          "notes": ""
+        },
+        {
+          "lat": 41.72051,
+          "lng": -73.93674,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 48
+    }
+  ],
+  "manholes": [
+    {
+      "id": "21",
+      "mid": "21",
+      "description": "South of sidewalk from Champ to Leo",
+      "Latitude": "41.719933",
+      "Longitude": "-73.935388"
+    },
+    {
+      "id": "22",
+      "mid": "22",
+      "description": "In between manhole 21 and Leo",
+      "Latitude": "41.719741",
+      "Longitude": "-73.935766"
+    },
+    {
+      "id": "23",
+      "mid": "23",
+      "description": "East of Leo",
+      "Latitude": "41.719521",
+      "Longitude": "-73.935952"
+    },
+    {
+      "id": "24",
+      "mid": "24",
+      "description": "South of manhole 25",
+      "Latitude": "41.720126",
+      "Longitude": "-73.935931"
+    },
+    {
+      "id": "25",
+      "mid": "25",
+      "description": "South of Champ",
+      "Latitude": "41.720198",
+      "Longitude": "-73.935942"
+    },
+    {
+      "id": "26",
+      "mid": "26",
+      "description": "South of Sheahan",
+      "Latitude": "41.719009",
+      "Longitude": "-73.93547"
+    },
+    {
+      "id": "27",
+      "mid": "27",
+      "description": "North of McCann",
+      "Latitude": "41.718339",
+      "Longitude": "-73.935471"
+    }
+  ]
+}
