@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ff9a291a9491748aed9318679b4340, type: 3}
+  m_Name: Zone_FroshDorm
+  m_EditorClassIdentifier: 
+  pointOfInterests:
+  - {fileID: 11400000, guid: 6000f4e551c3e46b79f87baa9a25f42d, type: 2}
+  - {fileID: 11400000, guid: be563d9ef297445ff99cb59f175de870, type: 2}
+  - {fileID: 11400000, guid: 6cae88e38af1f4c4aae521d89a605964, type: 2}
+  - {fileID: 11400000, guid: 4ed62e3cd4a9d44069ec98ccf1eb66a2, type: 2}
+  - {fileID: 11400000, guid: 05ed57a2a216740d9af021e9b98423fa, type: 2}
+  - {fileID: 11400000, guid: 7563568da374c4090b8682ada786a0e0, type: 2}
+  - {fileID: 11400000, guid: d6cb9b01823d74c27b735ac0a47e3e75, type: 2}
+  - {fileID: 11400000, guid: 69ed71a2f2baf44e0800e85e642f2b0f, type: 2}
+  - {fileID: 11400000, guid: 07608492639bd412b8342e0f2853b3a1, type: 2}
+  - {fileID: 11400000, guid: e6ea1f81b70404bb9b2294043d4d8274, type: 2}
+  - {fileID: 11400000, guid: bcb55e22171064ca2a1962a5c90b7a34, type: 2}
+  - {fileID: 11400000, guid: 37aeb923a6e1a45e0821d11ddd6cfe71, type: 2}
+  - {fileID: 11400000, guid: d1f78c995ecad4836aa0129a14ad61d2, type: 2}
+  - {fileID: 11400000, guid: e3819eac8739c445db45d53de982797d, type: 2}
+  - {fileID: 11400000, guid: 022b49c04e6f3434c9553a2d7323a1b1, type: 2}

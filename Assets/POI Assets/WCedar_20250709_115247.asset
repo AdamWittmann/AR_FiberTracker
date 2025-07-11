@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ff9a291a9491748aed9318679b4340, type: 3}
+  m_Name: WCedar_20250709_115247
+  m_EditorClassIdentifier: 
+  pointOfInterests:
+  - {fileID: 11400000, guid: c7fbd87d9c0f141199527a562f46b2b6, type: 2}
+  - {fileID: 11400000, guid: fbe1801ced6364017a4a26bbf0bdc7cb, type: 2}
+  - {fileID: 11400000, guid: ab687ffdfecb34025b4c1cff138e5502, type: 2}
+  - {fileID: 11400000, guid: 8b65b7cbcc667474ab61a31c413a5ead, type: 2}
+  - {fileID: 11400000, guid: 281e36d9a8f4e4870a1d0492abc46021, type: 2}
+  - {fileID: 11400000, guid: 36e96e87f9509431f8820fe020fd697f, type: 2}
+  - {fileID: 11400000, guid: d720065b5588146cab758a151fc00872, type: 2}
+  - {fileID: 11400000, guid: e49375baaa8be45d4995d6a637f1a96e, type: 2}
+  - {fileID: 11400000, guid: 53708db3d65b94d6e84e74239dc1c508, type: 2}
+  - {fileID: 11400000, guid: af47df45ffe654b5295c114ab643a882, type: 2}
+  - {fileID: 11400000, guid: acac3084fb5a645158c72f5b7ddc8f55, type: 2}
+  - {fileID: 11400000, guid: 6ab371fc0e6a54617b8cfe74d1a98112, type: 2}

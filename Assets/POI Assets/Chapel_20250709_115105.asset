@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ff9a291a9491748aed9318679b4340, type: 3}
+  m_Name: Chapel_20250709_115105
+  m_EditorClassIdentifier: 
+  pointOfInterests:
+  - {fileID: 11400000, guid: 80442ee9b7ae3415497334ff89e04fe1, type: 2}
+  - {fileID: 11400000, guid: 1035952cde99342089445822a7578c2e, type: 2}
+  - {fileID: 11400000, guid: 702cace8946784d7aba73ca057cd98b9, type: 2}
+  - {fileID: 11400000, guid: 42cb7d854013945f2894d55b6105face, type: 2}
+  - {fileID: 11400000, guid: 61cd09dbd4c7f451db99d13140abfece, type: 2}
+  - {fileID: 11400000, guid: 67f3baf2cabcc4c3f8934b625fc4b431, type: 2}
+  - {fileID: 11400000, guid: fc01d3a6f697246629e4ebc062a12825, type: 2}
+  - {fileID: 11400000, guid: 02088a27fc54e45bdb04f3b2211bcf81, type: 2}
+  - {fileID: 11400000, guid: 0fe956f0574dc434eab5b1553a1f702b, type: 2}

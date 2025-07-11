@@ -1,0 +1,81 @@
+{
+  "zone": "Boathouse",
+  "conduits": [
+    {
+      "name": "Line 17",
+      "segment": [
+        {
+          "lat": 41.72801,
+          "lng": -73.93331,
+          "notes": ""
+        },
+        {
+          "lat": 41.7281,
+          "lng": -73.93372,
+          "notes": ""
+        },
+        {
+          "lat": 41.72813,
+          "lng": -73.93394,
+          "notes": ""
+        },
+        {
+          "lat": 41.7282,
+          "lng": -73.93421,
+          "notes": ""
+        },
+        {
+          "lat": 41.72822,
+          "lng": -73.93446,
+          "notes": ""
+        },
+        {
+          "lat": 41.72815,
+          "lng": -73.93472,
+          "notes": ""
+        },
+        {
+          "lat": 41.72783,
+          "lng": -73.9351,
+          "notes": ""
+        },
+        {
+          "lat": 41.72725,
+          "lng": -73.93513,
+          "notes": ""
+        },
+        {
+          "lat": 41.72686,
+          "lng": -73.93498,
+          "notes": ""
+        },
+        {
+          "lat": 41.72691,
+          "lng": -73.93462,
+          "notes": ""
+        },
+        {
+          "lat": 41.72686,
+          "lng": -73.934,
+          "notes": ""
+        },
+        {
+          "lat": 41.72696,
+          "lng": -73.93398,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 17
+    }
+  ],
+  "manholes": [
+    {
+      "id": "51",
+      "mid": "TP1",
+      "description": "Telephone Pole - Owned by Marist",
+      "Latitude": "41.72801",
+      "Longitude": "-73.93331"
+    }
+  ]
+}

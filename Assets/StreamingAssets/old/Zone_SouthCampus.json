@@ -1,0 +1,216 @@
+{
+  "zone": "SouthCampus",
+  "conduits": [
+    {
+      "name": "Line 19",
+      "segment": [
+        {
+          "lat": 41.723411,
+          "lng": -73.926839,
+          "notes": ""
+        },
+        {
+          "lat": 41.723116,
+          "lng": -73.926596,
+          "notes": ""
+        },
+        {
+          "lat": 41.723198,
+          "lng": -73.926542,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 19
+    },
+    {
+      "name": "Line 20",
+      "segment": [
+        {
+          "lat": 41.723411,
+          "lng": -73.926839,
+          "notes": ""
+        },
+        {
+          "lat": 41.723581,
+          "lng": -73.926373,
+          "notes": ""
+        },
+        {
+          "lat": 41.723547,
+          "lng": -73.926317,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 20
+    },
+    {
+      "name": "Line 21",
+      "segment": [
+        {
+          "lat": 41.722346,
+          "lng": -73.925978,
+          "notes": ""
+        },
+        {
+          "lat": 41.72224,
+          "lng": -73.926557,
+          "notes": ""
+        },
+        {
+          "lat": 41.722612,
+          "lng": -73.926619,
+          "notes": ""
+        },
+        {
+          "lat": 41.722602,
+          "lng": -73.926799,
+          "notes": ""
+        },
+        {
+          "lat": 41.722556,
+          "lng": -73.926788,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 21
+    },
+    {
+      "name": "Line 22",
+      "segment": [
+        {
+          "lat": 41.72224,
+          "lng": -73.926557,
+          "notes": ""
+        },
+        {
+          "lat": 41.72221,
+          "lng": -73.926869,
+          "notes": ""
+        },
+        {
+          "lat": 41.722102,
+          "lng": -73.926847,
+          "notes": ""
+        },
+        {
+          "lat": 41.72211,
+          "lng": -73.926767,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 22
+    },
+    {
+      "name": "Line 23",
+      "segment": [
+        {
+          "lat": 41.722374,
+          "lng": -73.926187,
+          "notes": ""
+        },
+        {
+          "lat": 41.722116,
+          "lng": -73.926203,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 23
+    },
+    {
+      "name": "Line 24",
+      "segment": [
+        {
+          "lat": 41.722346,
+          "lng": -73.925978,
+          "notes": ""
+        },
+        {
+          "lat": 41.721575,
+          "lng": -73.925777,
+          "notes": ""
+        },
+        {
+          "lat": 41.721493,
+          "lng": -73.92586,
+          "notes": ""
+        },
+        {
+          "lat": 41.721417,
+          "lng": -73.926088,
+          "notes": ""
+        },
+        {
+          "lat": 41.721301,
+          "lng": -73.925881,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 24
+    },
+    {
+      "name": "Line 44",
+      "segment": [
+        {
+          "lat": 41.72218,
+          "lng": -73.92703
+        },
+        {
+          "lat": 41.722257,
+          "lng": -73.927154,
+          "notes": ""
+        },
+        {
+          "lat": 41.723938,
+          "lng": -73.927398,
+          "notes": ""
+        },
+        {
+          "lat": 41.72389,
+          "lng": -73.92776,
+          "notes": ""
+        },
+        {
+          "lat": 41.72391,
+          "lng": -73.9278,
+          "notes": ""
+        },
+        {
+          "lat": 41.72394,
+          "lng": -73.92776,
+          "notes": ""
+        }
+      ],
+      "description": "",
+      "id": 44
+    }
+  ],
+  "manholes": [
+    {
+      "id": "36",
+      "mid": "36",
+      "description": "Middle of Upper Fulton Parking Lot",
+      "Latitude": "41.722316",
+      "Longitude": "-73.9259"
+    },
+    {
+      "id": "37",
+      "mid": "37",
+      "description": "On trail in front of tennis courts",
+      "Latitude": "41.722119",
+      "Longitude": "-73.928165"
+    },
+    {
+      "id": "47",
+      "mid": "42",
+      "description": "West of Fulton 2, Previously: (41.722383, -73.927194)",
+      "Latitude": "41.72218",
+      "Longitude": "-73.92703"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ff9a291a9491748aed9318679b4340, type: 3}
+  m_Name: FoyCock_20250709_114945
+  m_EditorClassIdentifier: 
+  pointOfInterests:
+  - {fileID: 11400000, guid: af157176aeac744128e486b8c6cad138, type: 2}
+  - {fileID: 11400000, guid: bc830de01a830476fb0429ee917c27a9, type: 2}
+  - {fileID: 11400000, guid: 8b894ffd81461478fbe09b7cff80e617, type: 2}
+  - {fileID: 11400000, guid: 9e5847b186f6e4066b940fe955e38496, type: 2}
+  - {fileID: 11400000, guid: 4abf23ed176a442f9a4ded6fd9c833cd, type: 2}
+  - {fileID: 11400000, guid: 888867177f86444079d83e0f8b45cbd6, type: 2}
+  - {fileID: 11400000, guid: 7d6fec9072aa34d18a88f8051ca0cfef, type: 2}
+  - {fileID: 11400000, guid: 02775728bf8ca43ee968b57fa334d419, type: 2}
+  - {fileID: 11400000, guid: 736feba0f6a9740b484a5c48448805ed, type: 2}
+  - {fileID: 11400000, guid: 7dddc1069d3634a8faa5b655f608b448, type: 2}

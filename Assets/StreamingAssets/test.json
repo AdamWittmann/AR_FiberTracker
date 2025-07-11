@@ -1,0 +1,26 @@
+{
+  "zone": "Boathouse",
+  "conduits": [
+    {
+      "name": "Line 17",
+      "description": "",
+      "id": 17,
+      "segment": [
+        {
+          "lat": 41.72801,
+          "lng": -73.93331,
+          "notes": "Test segment"
+        }
+      ]
+    }
+  ],
+  "manholes": [
+    {
+      "id": "51",
+      "mid": "TP1",
+      "description": "Telephone Pole - Owned by Marist",
+      "Latitude": "41.72801",
+      "Longitude": "-73.93331"
+    }
+  ]
+}

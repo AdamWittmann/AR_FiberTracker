@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a23cc72d52a724ba59d8993adcfbfc, type: 3}
+  m_Name: POI_Manhole TP1_20250710_120741
+  m_EditorClassIdentifier: 
+  poiName: Manhole TP1
+  description: Telephone Pole - Owned by Marist
+  icon: {fileID: 0}
+  objectPrefab: {fileID: 0}
+  modelPrefab: {fileID: 0}
+  canvasPrefab: {fileID: 1531612421245766800, guid: 30fd3fde7eb86499eb80c5f796d46fec, type: 3}
+  coordinates:
+    lat: 41.72801
+    lon: -73.93331
+  trackingRadius: 75
+  trackingExitMargin: 15
+  closeTrackingRadius: 15
+  closeTrackingExitMargin: 5
+  positionMode: 0
+  facingDirectionHeading: 0
+  relativeHeight: 0
