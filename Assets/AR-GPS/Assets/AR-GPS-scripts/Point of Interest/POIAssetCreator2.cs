@@ -262,36 +262,36 @@ public class POIAssetCreator2 : MonoBehaviour
         }
     }
 
-    // private POIData ConvertManholeToPOIData(Manhole manhole)
-    // {
-    //     if (!double.TryParse(manhole.Latitude, out double lat) ||
-    //         !double.TryParse(manhole.Longitude, out double lon))
-    //     {
-    //         Debug.LogWarning($"Invalid coordinates for manhole {manhole.mid}");
-    //         return null;
-    //     }
-    //     //Load identifiers in resources/prefabs folder
-    //     GameObject manholeCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIManhole");
-    //     Sprite manholeIcon = Resources.Load<Sprite>("Prefabs/POIManholeIcon");
+    private POIData ConvertManholeToPOIData(Manhole manhole)
+    {
+        if (!double.TryParse(manhole.Latitude, out double lat) ||
+            !double.TryParse(manhole.Longitude, out double lon))
+        {
+            Debug.LogWarning($"Invalid coordinates for manhole {manhole.mid}");
+            return null;
+        }
+        //Load identifiers in resources/prefabs folder
+        GameObject manholeCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIManhole");
+        Sprite manholeIcon = Resources.Load<Sprite>("Prefabs/POIManholeIcon");
 
-    //     return new POIData
-    //     {
-    //         name = $"Manhole {manhole.mid}",
-    //         description = manhole.description,
-    //         latitude = lat,
-    //         longitude = lon,
-    //         trackingDistance = 75f,
-    //         closeTrackingDistance = 15f,
-    //         positionMode = POIPositionMode.AlignWithGround,
-    //         relativeHeight = 0f,
-    //         facingDirectionHeading = 0f, // North
-    //         // You'll need to assign these in the inspector or set defaults
-    //         icon = manholeIcon, // Set default icon
-    //         objectPrefab = null, // Set default prefab
-    //         modelPrefab = null, // Set default prefab
-    //         canvasPrefab = manholeCanvasPrefab // Set manhole prefab
-    //     };
-    // }
+        return new POIData
+        {
+            name = $"Manhole {manhole.mid}",
+            description = manhole.description,
+            latitude = lat,
+            longitude = lon,
+            trackingDistance = 75f,
+            closeTrackingDistance = 15f,
+            positionMode = POIPositionMode.AlignWithGround,
+            relativeHeight = 0f,
+            facingDirectionHeading = 0f, // North
+            // You'll need to assign these in the inspector or set defaults
+            icon = manholeIcon, // Set default icon
+            objectPrefab = null, // Set default prefab
+            modelPrefab = null, // Set default prefab
+            canvasPrefab = manholeCanvasPrefab // Set manhole prefab
+        };
+    }
     private POIData ConvertEnclosureToPOIData(Enclosure enclosure)
     {
         GameObject prefab = Resources.Load<GameObject>("Prefabs/POIManhole"); // or a custom one if needed
