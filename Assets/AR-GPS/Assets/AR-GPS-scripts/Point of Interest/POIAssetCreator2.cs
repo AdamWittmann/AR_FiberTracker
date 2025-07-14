@@ -9,7 +9,7 @@ public class POIAssetCreator2 : MonoBehaviour
     [Header("Asset Creation Settings")]
     [SerializeField]
     private string assetFolderPath = "Assets/POI Assets";
-    
+
     [SerializeField]
     private string poiSetName = "Generated POI Set";
 
@@ -34,7 +34,7 @@ public class POIAssetCreator2 : MonoBehaviour
     // Method to create assets programmatically
     public pLab_PointOfInterestSet CreatePOIAssets(List<POIData> poiDataList)
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         // Ensure the folder exists
         if (!AssetDatabase.IsValidFolder(assetFolderPath))
         {
@@ -67,15 +67,15 @@ public class POIAssetCreator2 : MonoBehaviour
         
         Debug.Log($"Created POI Set with {poiSet.PointOfInterests.Count} POIs at: {poiSetPath}");
         return poiSet;
-        #else
+#else
         Debug.LogWarning("POI Asset creation only works in the Unity Editor");
         return null;
-        #endif
+#endif
     }
 
     private pLab_PointOfInterest CreateSinglePOI(POIData data)
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         // Create the POI ScriptableObject
         pLab_PointOfInterest poi = ScriptableObject.CreateInstance<pLab_PointOfInterest>();
         
@@ -106,9 +106,9 @@ public class POIAssetCreator2 : MonoBehaviour
         AssetDatabase.CreateAsset(poi, poiPath);
         
         return poi;
-        #else
+#else
         return null;
-        #endif
+#endif
     }
 
     // Method to load JSON from file path and create assets
@@ -152,6 +152,46 @@ public class POIAssetCreator2 : MonoBehaviour
             Debug.LogError($"Error loading JSON resource: {e.Message}");
         }
     }
+    [ContextMenu("Load Enclosures From JSON")]
+    public void LoadEnclosuresFromJSON()
+    {
+        if (string.IsNullOrEmpty(jsonFilePath))
+        {
+            Debug.LogError("JSON file path is empty. Please set it in the inspector.");
+            return;
+        }
+
+        if (!System.IO.File.Exists(jsonFilePath))
+        {
+            Debug.LogError($"JSON file not found at path: {jsonFilePath}");
+            return;
+        }
+
+        try
+        {
+            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
+            Enclosure[] enclosures = JsonHelper.FromJson<Enclosure>(jsonString);
+
+            if (enclosures == null || enclosures.Length == 0)
+            {
+                Debug.LogWarning("No enclosures found in JSON.");
+                return;
+            }
+
+            List<POIData> poiDataList = new List<POIData>();
+            foreach (var enclosure in enclosures)
+            {
+                poiDataList.Add(ConvertEnclosureToPOIData(enclosure));
+            }
+
+            CreatePOIAssets(poiDataList);
+            Debug.Log($"Successfully created {poiDataList.Count} enclosure POIs from JSON.");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Error parsing Enclosure JSON: {ex.Message}");
+        }
+    }
 
     // Updated JSON loader method that creates assets
     public void LoadPOIsFromJSONAndCreateAssets(string jsonString)
@@ -159,7 +199,7 @@ public class POIAssetCreator2 : MonoBehaviour
         try
         {
             JSONPOIData jsonData = JsonUtility.FromJson<JSONPOIData>(jsonString);
-            
+
             if (jsonData == null)
             {
                 Debug.LogError("JSON data is null after parsing");
@@ -168,9 +208,9 @@ public class POIAssetCreator2 : MonoBehaviour
 
             // Auto-set reference point if not already set
             AutoSetReferencePoint(jsonData);
-            
+
             List<POIData> poiDataList = new List<POIData>();
-            
+
             // Convert manholes to POI data
             if (jsonData.manholes != null)
             {
@@ -186,7 +226,7 @@ public class POIAssetCreator2 : MonoBehaviour
                     }
                 }
             }
-            
+
             // Convert conduits to POI data (with lines)
             if (jsonData.conduits != null)
             {
@@ -202,10 +242,10 @@ public class POIAssetCreator2 : MonoBehaviour
                     }
                 }
             }
-            
+
             // Create the assets
             pLab_PointOfInterestSet createdSet = CreatePOIAssets(poiDataList);
-            
+
             // Assign to manager if available
             // var poiManager = FindObjectOfType<ARPointOfInterestManager>();
             // if (poiManager != null && createdSet != null)
@@ -214,7 +254,7 @@ public class POIAssetCreator2 : MonoBehaviour
             //     // poiManager.pointOfInterestSet = createdSet;
             //     Debug.Log("POI Set created. Please assign it manually to ARPointOfInterestManager");
             // }
-            
+
         }
         catch (System.Exception e)
         {
@@ -222,34 +262,52 @@ public class POIAssetCreator2 : MonoBehaviour
         }
     }
 
-    private POIData ConvertManholeToPOIData(Manhole manhole)
+    // private POIData ConvertManholeToPOIData(Manhole manhole)
+    // {
+    //     if (!double.TryParse(manhole.Latitude, out double lat) ||
+    //         !double.TryParse(manhole.Longitude, out double lon))
+    //     {
+    //         Debug.LogWarning($"Invalid coordinates for manhole {manhole.mid}");
+    //         return null;
+    //     }
+    //     //Load identifiers in resources/prefabs folder
+    //     GameObject manholeCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIManhole");
+    //     Sprite manholeIcon = Resources.Load<Sprite>("Prefabs/POIManholeIcon");
+
+    //     return new POIData
+    //     {
+    //         name = $"Manhole {manhole.mid}",
+    //         description = manhole.description,
+    //         latitude = lat,
+    //         longitude = lon,
+    //         trackingDistance = 75f,
+    //         closeTrackingDistance = 15f,
+    //         positionMode = POIPositionMode.AlignWithGround,
+    //         relativeHeight = 0f,
+    //         facingDirectionHeading = 0f, // North
+    //         // You'll need to assign these in the inspector or set defaults
+    //         icon = manholeIcon, // Set default icon
+    //         objectPrefab = null, // Set default prefab
+    //         modelPrefab = null, // Set default prefab
+    //         canvasPrefab = manholeCanvasPrefab // Set manhole prefab
+    //     };
+    // }
+    private POIData ConvertEnclosureToPOIData(Enclosure enclosure)
     {
-        if (!double.TryParse(manhole.Latitude, out double lat) || 
-            !double.TryParse(manhole.Longitude, out double lon))
-        {
-            Debug.LogWarning($"Invalid coordinates for manhole {manhole.mid}");
-            return null;
-        }
-        //Load identifiers in resources/prefabs folder
-        GameObject manholeCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIManhole");
-        Sprite manholeIcon = Resources.Load<Sprite>("Prefabs/POIManholeIcon");
+        GameObject prefab = Resources.Load<GameObject>("Prefabs/POIManhole"); // or a custom one if needed
 
         return new POIData
         {
-            name = $"Manhole {manhole.mid}",
-            description = manhole.description,
-            latitude = lat,
-            longitude = lon,
+            name = enclosure.name,
+            description = enclosure.notes,
+            latitude = enclosure.gps_coordinates.latitude,
+            longitude = enclosure.gps_coordinates.longitude,
             trackingDistance = 75f,
             closeTrackingDistance = 15f,
             positionMode = POIPositionMode.AlignWithGround,
             relativeHeight = 0f,
-            facingDirectionHeading = 0f, // North
-            // You'll need to assign these in the inspector or set defaults
-            icon = manholeIcon, // Set default icon
-            objectPrefab = null, // Set default prefab
-            modelPrefab = null, // Set default prefab
-            canvasPrefab = manholeCanvasPrefab // Set manhole prefab
+            facingDirectionHeading = 0f,
+            canvasPrefab = prefab
         };
     }
 
@@ -260,7 +318,7 @@ public class POIAssetCreator2 : MonoBehaviour
         if (conduit.segment != null && conduit.segment.Count > 0)
         {
             GameObject conduitCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIFiberLine");
-            
+
             // Create the line renderer if enabled
             if (createLineRenderers)
             {
@@ -270,7 +328,7 @@ public class POIAssetCreator2 : MonoBehaviour
                     Debug.Log($"Created line renderer for conduit: {conduit.name}");
                 }
             }
-            
+
             // Start point
             conduitPOIData.Add(new POIData
             {
@@ -313,7 +371,7 @@ public class POIAssetCreator2 : MonoBehaviour
     private GameObject CreateConduitLineRenderer(Conduit conduit)
     {
         Debug.Log($"Attempting to create line renderer for conduit: {conduit.name}");
-        
+
         if (conduit.segment == null || conduit.segment.Count < 2)
         {
             Debug.Log($"Conduit {conduit.name} has insufficient segments: {conduit.segment?.Count ?? 0}");
@@ -325,7 +383,7 @@ public class POIAssetCreator2 : MonoBehaviour
         GameObject linePrefab = Resources.Load<GameObject>("Prefabs/SegmentLine");
         GameObject lineObj;
         LineRenderer lineRenderer;
-        
+
         // Use prefab if available, otherwise create new GameObject
         if (linePrefab != null)
         {
@@ -333,7 +391,7 @@ public class POIAssetCreator2 : MonoBehaviour
             lineObj = Instantiate(linePrefab);
             lineObj.name = $"ConduitLine_{conduit.name}";
             lineRenderer = lineObj.GetComponent<LineRenderer>();
-            
+
             // If prefab doesn't have LineRenderer, add it
             if (lineRenderer == null)
             {
@@ -348,7 +406,7 @@ public class POIAssetCreator2 : MonoBehaviour
             lineObj = new GameObject($"ConduitLine_{conduit.name}");
             lineRenderer = lineObj.AddComponent<LineRenderer>();
         }
-        
+
         // Configure LineRenderer
         if (lineRenderer.material == null)
         {
@@ -359,8 +417,8 @@ public class POIAssetCreator2 : MonoBehaviour
         lineRenderer.endWidth = lineWidth;
         lineRenderer.useWorldSpace = true;
         lineRenderer.positionCount = conduit.segment.Count;
-        
-        
+
+
         // Convert GPS coordinates to Unity positions
         for (int i = 0; i < conduit.segment.Count; i++)
         {
@@ -369,7 +427,7 @@ public class POIAssetCreator2 : MonoBehaviour
             lineRenderer.SetPosition(i, worldPos);
             Debug.Log($"Segment {i}: GPS({segment.lat}, {segment.lng}) -> Unity({worldPos.x}, {worldPos.y}, {worldPos.z})");
         }
-        
+
         Debug.Log($"Successfully created line renderer for conduit: {conduit.name}");
         return lineObj;
     }
@@ -379,10 +437,10 @@ public class POIAssetCreator2 : MonoBehaviour
     {
         // Create a LatLon point for the target coordinates
         pLab_LatLon targetPoint = new pLab_LatLon(lat, lng);
-        
+
         // Get the UTM difference from your reference point
         Vector2 utmDifference = pLab_GeoTools.UTMDifferenceBetweenPoints(referencePoint, targetPoint);
-        
+
         // Convert to Unity coordinates (UTM X = Unity X, UTM Y = Unity Z, Unity Y = 0 for ground level)
         return new Vector3(utmDifference.x, 0f, utmDifference.y);
     }
@@ -402,7 +460,7 @@ public class POIAssetCreator2 : MonoBehaviour
             if (jsonData.manholes != null && jsonData.manholes.Count > 0)
             {
                 var firstManhole = jsonData.manholes[0];
-                if (double.TryParse(firstManhole.Latitude, out double lat) && 
+                if (double.TryParse(firstManhole.Latitude, out double lat) &&
                     double.TryParse(firstManhole.Longitude, out double lng))
                 {
                     SetReferencePoint(lat, lng);
@@ -410,7 +468,7 @@ public class POIAssetCreator2 : MonoBehaviour
                     return;
                 }
             }
-            
+
             // Try to get reference from first conduit segment
             if (jsonData.conduits != null && jsonData.conduits.Count > 0)
             {
@@ -422,12 +480,12 @@ public class POIAssetCreator2 : MonoBehaviour
                     return;
                 }
             }
-            
+
             Debug.LogWarning("Could not auto-set reference point. Please set it manually.");
         }
     }
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     [ContextMenu("Generate POI Assets from JSON")]
     public void GeneratePOIAssetsFromJSON()
     {
@@ -476,7 +534,7 @@ public class POIAssetCreator2 : MonoBehaviour
 
         CreatePOIAssets(sampleData);
     }
-    #endif
+#endif
 }
 
 // Data structure to hold POI information
@@ -498,4 +556,48 @@ public class POIData
     public GameObject canvasPrefab;
     public GameObject manholeCanvasPrefab;
     public GameObject conduitCanvasPrefab;
+}
+[System.Serializable]
+public class Enclosure
+{
+    public string id;
+    public string name;
+    public GPS_Coordinates gps_coordinates;
+    public Directions directions;
+    public string notes;
+}
+[System.Serializable]
+public class GPS_Coordinates
+{
+    public double latitude;
+    public double longitude;
+
+}
+[System.Serializable]
+public class Directions
+{
+    public List<string> North;
+    public List<string> South;
+    public List<string> East;
+    public List<string> West;
+    public List<string> NorthEast;
+    public List<string> NorthWest;
+    public List<string> SouthEast;
+    public List<string> SouthWest;
+}
+
+public static class JsonHelper
+{
+    public static T[] FromJson<T>(string json)
+    {
+        string newJson = "{\"array\":" + json + "}";
+        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(newJson);
+        return wrapper.array;
+    }
+
+    [System.Serializable]
+    private class Wrapper<T>
+    {
+        public T[] array;
+    }
 }
