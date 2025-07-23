@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &538559841
 Transform:
   m_ObjectHideFlags: 0
@@ -448,8 +448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetFolderPath: Assets/POI Assets
-  poiSetName: test
-  jsonFilePath: /Assets/StreamingAssets/test.json
+  poiSetName: AllManholes
+  jsonFilePath: Assets/StreamingAssets/manholes+directions.json
   createLineRenderers: 1
   lineWidth: 1
   lineColor: {r: 0.45710218, g: 0.6537945, b: 0.9056604, a: 1}
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118a9d79c29580a4cae120997aab2419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointOfInterestSet: {fileID: 11400000, guid: 668e7e9f6f41d4087bdca1c84911d536, type: 2}
+  pointOfInterestSet: {fileID: 11400000, guid: 3287e1ac5e42545d381636dca53a4d74, type: 2}
   positioningMode: 0
   arTrueNorthFinder: {fileID: 962445126}
   arCamera: {fileID: 1205957513}

@@ -28,7 +28,7 @@
 		<type fullname="pLab_PointOfInterestCanvas" preserve="nothing"/>
 		<type fullname="pLab_PointOfInterestSet" preserve="nothing"/>
 		<type fullname="pLab_TrueNorthCalculationUI" preserve="nothing"/>
-		<type fullname="POIAssetCreator" preserve="nothing"/>
+		<type fullname="POIAssetCreator2" preserve="nothing"/>
 		<type fullname="ScriptablePalette" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
@@ -96,6 +96,7 @@
 		<type fullname="UnityEngine.Halo" preserve="nothing"/>
 		<type fullname="UnityEngine.Light" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.LineRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
