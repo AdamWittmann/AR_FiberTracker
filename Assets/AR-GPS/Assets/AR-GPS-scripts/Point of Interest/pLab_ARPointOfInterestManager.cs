@@ -277,7 +277,6 @@ public class pLab_ARPointOfInterestManager : MonoBehaviour
     #endregion
 
     #region Event Handlers
-
     private void OnARSessionStateChange(ARSessionStateChangedEventArgs evt)
     {
         previousUpdateAccuracy = 9999f;
