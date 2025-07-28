@@ -670,30 +670,8 @@ public class SegmentPoint
     public double lng;              // Longitude
 }
 
-// Missing JSON data structures (you'll need to add these based on your JSON structure)
-[System.Serializable]
-public class JSONPOIData
-{
-    public List<Manhole> manholes;
-    public List<Conduit> conduits;
-}
-
-[System.Serializable]
-public class Manhole
-{
-    public string mid;
-    public string Latitude;
-    public string Longitude;
-    public string description;
-}
-
-[System.Serializable]
-public class Conduit
-{
-    public string name;
-    public string description;
-    public List<ConduitSegment> segment;
-}
+// Note: JSONPOIData, Manhole, and Conduit classes should be defined elsewhere in your project
+// to avoid duplicate definitions. These are referenced but not defined here.
 
 public static class JsonHelper
 {
