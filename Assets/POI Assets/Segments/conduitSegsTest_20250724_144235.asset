@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ff9a291a9491748aed9318679b4340, type: 3}
+  m_Name: conduitSegsTest_20250724_144235
+  m_EditorClassIdentifier: 
+  pointOfInterests:
+  - {fileID: 11400000, guid: c867231e54e24444d81c9a0a13d0f1d3, type: 2}
+  - {fileID: 11400000, guid: 1d861a9198e9940aea88cf20e35b94be, type: 2}
+  - {fileID: 11400000, guid: a4eeb01e597684b799367c6d2dad5ee8, type: 2}

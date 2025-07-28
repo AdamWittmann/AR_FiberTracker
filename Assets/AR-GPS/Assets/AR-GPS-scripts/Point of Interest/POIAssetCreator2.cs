@@ -24,112 +24,7 @@ public class ConduitLineSet : ScriptableObject
 }
 
 // Component to render conduit lines from the asset
-public class ConduitLineRenderer : MonoBehaviour
-{
-    [Header("Conduit Line Settings")]
-    [SerializeField]
-    private ConduitLineSet conduitLineSet;
-    
-    [SerializeField]
-    private Material defaultLineMaterial;
-    
-    [SerializeField]
-    private bool createOnStart = true;
 
-    private List<GameObject> renderedLines = new List<GameObject>();
-
-    private void Start()
-    {
-        if (createOnStart && conduitLineSet != null)
-        {
-            RenderConduitLines();
-        }
-    }
-
-    public void SetConduitLineSet(ConduitLineSet lineSet)
-    {
-        conduitLineSet = lineSet;
-        RenderConduitLines();
-    }
-
-    public void RenderConduitLines()
-    {
-        // Clear existing lines
-        ClearRenderedLines();
-
-        if (conduitLineSet == null)
-        {
-            Debug.LogWarning("No conduit line set assigned");
-            return;
-        }
-
-        foreach (var conduitData in conduitLineSet.conduitLines)
-        {
-            CreateLineRenderer(conduitData);
-        }
-
-        Debug.Log($"Rendered {conduitLineSet.conduitLines.Count} conduit lines");
-    }
-
-    private void CreateLineRenderer(ConduitLineSet.ConduitLineData conduitData)
-    {
-        if (conduitData.worldPositions == null || conduitData.worldPositions.Count < 2)
-        {
-            Debug.LogWarning($"Conduit {conduitData.conduitName} has insufficient positions");
-            return;
-        }
-
-        GameObject lineObj = new GameObject($"ConduitLine_{conduitData.conduitName}");
-        lineObj.transform.SetParent(transform);
-
-        LineRenderer lineRenderer = lineObj.AddComponent<LineRenderer>();
-        
-        // Configure line renderer
-        Material material = conduitData.lineMaterial ?? defaultLineMaterial;
-        if (material == null)
-        {
-            material = new Material(Shader.Find("Sprites/Default"));
-        }
-        
-        lineRenderer.material = material;
-        lineRenderer.material.color = conduitData.lineColor;
-        lineRenderer.startWidth = conduitData.lineWidth;
-        lineRenderer.endWidth = conduitData.lineWidth;
-        lineRenderer.useWorldSpace = true;
-        lineRenderer.positionCount = conduitData.worldPositions.Count;
-
-        // Set positions
-        for (int i = 0; i < conduitData.worldPositions.Count; i++)
-        {
-            lineRenderer.SetPosition(i, conduitData.worldPositions[i]);
-        }
-
-        renderedLines.Add(lineObj);
-    }
-
-    public void ClearRenderedLines()
-    {
-        foreach (var line in renderedLines)
-        {
-            if (line != null)
-            {
-                if (Application.isPlaying)
-                    Destroy(line);
-                else
-                    DestroyImmediate(line);
-            }
-        }
-        renderedLines.Clear();
-    }
-
-    private void OnValidate()
-    {
-        if (Application.isPlaying && conduitLineSet != null)
-        {
-            RenderConduitLines();
-        }
-    }
-}
 public class POIAssetCreator2 : MonoBehaviour
 {
     [Header("Conduit Line Asset Settings")]
@@ -389,10 +284,10 @@ private string conduitLineSetName = "Generated Conduit Lines";
             conduitLineSet = CreateConduitLineAsset(conduits);
             
             // Automatically create and setup line renderer
-            if (conduitLineSet != null)
-            {
-                CreateConduitLineRendererInScene(conduitLineSet);
-            }
+            // if (conduitLineSet != null)
+            // {
+            //     CreateConduitLineRendererInScene(conduitLineSet);
+            // }
         }
 
         Debug.Log($"Created POI Set with {poiDataList.Count} POIs and Conduit Line Set with {conduits?.Count ?? 0} conduits");
@@ -404,24 +299,24 @@ private string conduitLineSetName = "Generated Conduit Lines";
     }
 }
 
-    // NEW METHOD: Automatically create line renderer in scene
-    private void CreateConduitLineRendererInScene(ConduitLineSet conduitLineSet)
-    {
-        // Look for existing renderer
-        ConduitLineRenderer existingRenderer = FindObjectOfType<ConduitLineRenderer>();
+    // // NEW METHOD: Automatically create line renderer in scene
+    // private void CreateConduitLineRendererInScene(ConduitLineSet conduitLineSet)
+    // {
+    //     // Look for existing renderer
+    //     ConduitLineRenderer existingRenderer = FindObjectOfType<ConduitLineRenderer>();
         
-        if (existingRenderer == null)
-        {
-            // Create new GameObject with renderer
-            GameObject rendererObj = new GameObject("Conduit Line Renderer");
-            existingRenderer = rendererObj.AddComponent<ConduitLineRenderer>();
-            Debug.Log("Created new ConduitLineRenderer GameObject");
-        }
+    //     if (existingRenderer == null)
+    //     {
+    //         // Create new GameObject with renderer
+    //         GameObject rendererObj = new GameObject("Conduit Line Renderer");
+    //         existingRenderer = rendererObj.AddComponent<ConduitLineRenderer>();
+    //         Debug.Log("Created new ConduitLineRenderer GameObject");
+    //     }
         
-        // Set the conduit line set and render
-        existingRenderer.SetConduitLineSet(conduitLineSet);
-        Debug.Log("Set conduit line set and triggered rendering");
-    }
+    //     // Set the conduit line set and render
+    //     existingRenderer.SetConduitLineSet(conduitLineSet);
+    //     Debug.Log("Set conduit line set and triggered rendering");
+    // }
 
     private POIData ConvertManholeToPOIData(Manhole manhole)
     {
@@ -751,30 +646,6 @@ public class POIData
 }
 
 // JSON data structures - exactly as you had them
-[System.Serializable]
-public class JSONPOIData
-{
-    public List<Manhole> manholes;
-    public List<Conduit> conduits;
-}
-
-[System.Serializable]
-public class Manhole
-{
-    public string mid;
-    public string description;
-    public string Latitude;
-    public string Longitude;
-}
-
-[System.Serializable]
-public class Conduit
-{
-    public string name;
-    public string description;
-    public List<ConduitSegment> segment;
-}
-
 [System.Serializable]
 public class ConduitSegment
 {
