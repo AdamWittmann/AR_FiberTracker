@@ -1,5 +1,6 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ConduitLineSet/ConduitLineData" preserve="nothing" serialized="true"/>
 		<type fullname="Mapbox.Unity.Map.SpawnPrefabOptions" preserve="nothing" serialized="true"/>
 		<type fullname="Mapbox.Unity.MeshGeneration.Data.AtlasEntity" preserve="nothing" serialized="true"/>
 		<type fullname="Mapbox.Unity.MeshGeneration.Modifiers.FeatureBundle" preserve="nothing" serialized="true"/>

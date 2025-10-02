@@ -6,6 +6,12 @@ using UnityEditor;
 
 public class POIAssetCreator2 : MonoBehaviour
 {
+    [Header("Conduit Line Asset Settings")]
+    [SerializeField]
+    private bool createConduitLineAsset = true;
+    [SerializeField]
+    private string conduitLineSetName = "Generated Conduit Lines";
+    
     [Header("Asset Creation Settings")]
     [SerializeField]
     private string assetFolderPath = "Assets/POI Assets";
@@ -60,11 +66,11 @@ public class POIAssetCreator2 : MonoBehaviour
         // Save the POI Set asset
         string poiSetPath = $"{assetFolderPath}/{poiSetName}_{System.DateTime.Now:yyyyMMdd_HHmmss}.asset";
         AssetDatabase.CreateAsset(poiSet, poiSetPath);
-        
+
         // Save and refresh
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        
+
         Debug.Log($"Created POI Set with {poiSet.PointOfInterests.Count} POIs at: {poiSetPath}");
         return poiSet;
 #else
@@ -78,33 +84,33 @@ public class POIAssetCreator2 : MonoBehaviour
 #if UNITY_EDITOR
         // Create the POI ScriptableObject
         pLab_PointOfInterest poi = ScriptableObject.CreateInstance<pLab_PointOfInterest>();
-        
+
         // Set basic properties
         poi.PoiName = data.name;
         poi.Description = data.description;
         poi.Icon = data.icon;
-        
+
         // Set GPS coordinates
         poi.Coordinates = new pLab_LatLon(data.latitude, data.longitude);
-        
+
         // Set tracking distances
         poi.TrackingRadius = (int)data.trackingDistance;
         poi.CloseTrackingRadius = (int)data.closeTrackingDistance;
-        
+
         // Set positioning
         poi.PositionMode = data.positionMode;
         poi.RelativeHeight = data.relativeHeight;
         poi.FacingDirectionHeading = data.facingDirectionHeading;
-        
+
         // Set prefabs
         poi.ObjectPrefab = data.objectPrefab;
         poi.ModelPrefab = data.modelPrefab;
         poi.CanvasPrefab = data.canvasPrefab;
-        
+
         // Save individual POI as asset
         string poiPath = $"{assetFolderPath}/POI_{data.name}_{System.DateTime.Now:yyyyMMdd_HHmmss}.asset";
         AssetDatabase.CreateAsset(poi, poiPath);
-        
+
         return poi;
 #else
         return null;
@@ -152,6 +158,7 @@ public class POIAssetCreator2 : MonoBehaviour
             Debug.LogError($"Error loading JSON resource: {e.Message}");
         }
     }
+
     [ContextMenu("Load Enclosures From JSON")]
     public void LoadEnclosuresFromJSON()
     {
@@ -193,7 +200,7 @@ public class POIAssetCreator2 : MonoBehaviour
         }
     }
 
-    // Updated JSON loader method that creates assets
+    // Updated JSON loader method that creates assets - OPTIMIZED ORDER
     public void LoadPOIsFromJSONAndCreateAssets(string jsonString)
     {
         try
@@ -206,14 +213,15 @@ public class POIAssetCreator2 : MonoBehaviour
                 return;
             }
 
-            // Auto-set reference point if not already set
+            // Auto-set reference point first
             AutoSetReferencePoint(jsonData);
 
             List<POIData> poiDataList = new List<POIData>();
 
-            // Convert manholes to POI data
+            // STEP 1: Process manholes/enclosures FIRST (data points)
             if (jsonData.manholes != null)
             {
+                Debug.Log($"Processing {jsonData.manholes.Count} manholes first");
                 foreach (var manhole in jsonData.manholes)
                 {
                     if (manhole != null)
@@ -227,38 +235,54 @@ public class POIAssetCreator2 : MonoBehaviour
                 }
             }
 
-            // Convert conduits to POI data (with lines)
-            if (jsonData.conduits != null)
+            // Create POI assets for manholes/enclosures first
+            pLab_PointOfInterestSet poiSet = CreatePOIAssets(poiDataList);
+            Debug.Log($"Created POI Set with {poiDataList.Count} manholes/enclosures");
+
+            // STEP 2: Process conduits SECOND (connection paths)
+            ConduitLineSet conduitLineSet = null;
+            if (createConduitLineAsset && jsonData.conduits != null && jsonData.conduits.Count > 0)
             {
-                foreach (var conduit in jsonData.conduits)
+                Debug.Log($"Processing {jsonData.conduits.Count} conduits for line rendering");
+                conduitLineSet = CreateConduitLineAsset(jsonData.conduits);
+                
+                if (conduitLineSet != null)
                 {
-                    if (conduit != null)
+                    Debug.Log($"Successfully created conduit line set with {conduitLineSet.conduitLines.Count} conduit lines");
+                    
+                    // Optionally create conduit POIs for start/end points
+                    List<POIData> conduitPOIData = new List<POIData>();
+                    foreach (var conduit in jsonData.conduits)
                     {
-                        var conduitPOIData = ConvertConduitToPOIDataWithLines(conduit);
-                        if (conduitPOIData != null && conduitPOIData.Count > 0)
+                        var conduitPOIs = ConvertConduitToPOIDataWithLines(conduit);
+                        if (conduitPOIs != null && conduitPOIs.Count > 0)
                         {
-                            poiDataList.AddRange(conduitPOIData);
+                            conduitPOIData.AddRange(conduitPOIs);
                         }
+                    }
+                    
+                    if (conduitPOIData.Count > 0)
+                    {
+                        // Add conduit POIs to existing set or create separate set
+                        foreach (var conduitPOI in conduitPOIData)
+                        {
+                            pLab_PointOfInterest poi = CreateSinglePOI(conduitPOI);
+                            if (poi != null)
+                            {
+                                poiSet.PointOfInterests.Add(poi);
+                            }
+                        }
+                        Debug.Log($"Added {conduitPOIData.Count} conduit POIs to existing set");
                     }
                 }
             }
 
-            // Create the assets
-            pLab_PointOfInterestSet createdSet = CreatePOIAssets(poiDataList);
-
-            // Assign to manager if available
-            // var poiManager = FindObjectOfType<ARPointOfInterestManager>();
-            // if (poiManager != null && createdSet != null)
-            // {
-            //     // Note: You'll need to check the actual property name in ARPointOfInterestManager
-            //     // poiManager.pointOfInterestSet = createdSet;
-            //     Debug.Log("POI Set created. Please assign it manually to ARPointOfInterestManager");
-            // }
+            Debug.Log($"Processing complete: POI Set with {poiSet?.PointOfInterests?.Count ?? 0} total POIs, Conduit Line Set with {conduitLineSet?.conduitLines?.Count ?? 0} conduit lines");
 
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"Error creating POI assets from JSON: {e.Message}");
+            Debug.LogError($"Error creating POI assets from JSON: {e.Message}\nStack trace: {e.StackTrace}");
         }
     }
 
@@ -292,6 +316,7 @@ public class POIAssetCreator2 : MonoBehaviour
             canvasPrefab = manholeCanvasPrefab // Set manhole prefab
         };
     }
+
     private POIData ConvertEnclosureToPOIData(Enclosure enclosure)
     {
         GameObject prefab = Resources.Load<GameObject>("Prefabs/POIManhole"); // or a custom one if needed
@@ -315,50 +340,67 @@ public class POIAssetCreator2 : MonoBehaviour
     {
         List<POIData> conduitPOIData = new List<POIData>();
 
-        if (conduit.segment != null && conduit.segment.Count > 0)
+        if (conduit.segment == null || conduit.segment.Count == 0)
         {
-            GameObject conduitCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIFiberLine");
+            Debug.LogWarning($"Conduit {conduit.name} has no segments");
+            return conduitPOIData;
+        }
 
-            // Create the line renderer if enabled
-            if (createLineRenderers)
-            {
-                GameObject lineObj = CreateConduitLineRenderer(conduit);
-                if (lineObj != null)
-                {
-                    Debug.Log($"Created line renderer for conduit: {conduit.name}");
-                }
-            }
+        GameObject conduitCanvasPrefab = Resources.Load<GameObject>("Prefabs/POIFiberLine");
+        if (conduitCanvasPrefab == null)
+        {
+            Debug.LogWarning("POIFiberLine prefab not found in Resources/Prefabs/");
+        }
 
-            // Start point
+        // Start point
+        conduitPOIData.Add(new POIData
+        {
+            name = $"{conduit.name} Start",
+            description = $"{conduit.description}\nNotes: {conduit.segment[0].notes}",
+            latitude = conduit.segment[0].lat,
+            longitude = conduit.segment[0].lng,
+            trackingDistance = 75f,
+            closeTrackingDistance = 15f,
+            positionMode = POIPositionMode.AlignWithGround,
+            relativeHeight = 0f,
+            facingDirectionHeading = 0f,
+            canvasPrefab = conduitCanvasPrefab
+        });
+
+        // End point (if more than one segment)
+        if (conduit.segment.Count > 1)
+        {
+            var lastSegment = conduit.segment[conduit.segment.Count - 1];
             conduitPOIData.Add(new POIData
             {
-                name = $"{conduit.name} Start",
-                description = $"{conduit.description}\nNotes: {conduit.segment[0].notes}",
-                latitude = conduit.segment[0].lat,
-                longitude = conduit.segment[0].lng,
+                name = $"{conduit.name} End",
+                description = $"{conduit.description}\nNotes: {lastSegment.notes}",
+                latitude = lastSegment.lat,
+                longitude = lastSegment.lng,
                 trackingDistance = 75f,
                 closeTrackingDistance = 15f,
                 positionMode = POIPositionMode.AlignWithGround,
                 relativeHeight = 0f,
-                facingDirectionHeading = 0f, // North
+                facingDirectionHeading = 0f,
                 canvasPrefab = conduitCanvasPrefab
             });
 
-            // End point (if more than one segment)
-            if (conduit.segment.Count > 1)
+            // Midpoint (if more than 2 segments)
+            if (conduit.segment.Count > 2)
             {
-                var lastSegment = conduit.segment[conduit.segment.Count - 1];
+                int midIndex = conduit.segment.Count / 2;
+                var mid = conduit.segment[midIndex];
                 conduitPOIData.Add(new POIData
                 {
-                    name = $"{conduit.name} End",
-                    description = $"{conduit.description}\nNotes: {lastSegment.notes}",
-                    latitude = lastSegment.lat,
-                    longitude = lastSegment.lng,
+                    name = $"{conduit.name} Midpoint",
+                    description = $"Midpoint of {conduit.name}\nNotes: {mid.notes}",
+                    latitude = mid.lat,
+                    longitude = mid.lng,
                     trackingDistance = 75f,
                     closeTrackingDistance = 15f,
                     positionMode = POIPositionMode.AlignWithGround,
                     relativeHeight = 0f,
-                    facingDirectionHeading = 0f, // North
+                    facingDirectionHeading = 0f,
                     canvasPrefab = conduitCanvasPrefab
                 });
             }
@@ -367,69 +409,85 @@ public class POIAssetCreator2 : MonoBehaviour
         return conduitPOIData;
     }
 
-    // Add this method to create LineRenderer GameObjects for conduits
-    private GameObject CreateConduitLineRenderer(Conduit conduit)
+    // OPTIMIZED: Create conduit line asset directly from conduit list
+    private ConduitLineSet CreateConduitLineAsset(List<Conduit> conduits)
     {
-        Debug.Log($"Attempting to create line renderer for conduit: {conduit.name}");
-
-        if (conduit.segment == null || conduit.segment.Count < 2)
+#if UNITY_EDITOR
+        if (referencePoint == null)
         {
-            Debug.Log($"Conduit {conduit.name} has insufficient segments: {conduit.segment?.Count ?? 0}");
+            Debug.LogError("Reference point must be set to create conduit line assets");
             return null;
         }
 
-        Debug.Log($"Conduit {conduit.name} has {conduit.segment.Count} segments");
-
-        GameObject linePrefab = Resources.Load<GameObject>("Prefabs/SegmentLine");
-        GameObject lineObj;
-        LineRenderer lineRenderer;
-
-        // Use prefab if available, otherwise create new GameObject
-        if (linePrefab != null)
+        // Ensure the folder exists
+        if (!AssetDatabase.IsValidFolder(assetFolderPath))
         {
-            Debug.Log($"Using prefab for line renderer");
-            lineObj = Instantiate(linePrefab);
-            lineObj.name = $"ConduitLine_{conduit.name}";
-            lineRenderer = lineObj.GetComponent<LineRenderer>();
+            string parentFolder = System.IO.Path.GetDirectoryName(assetFolderPath);
+            string folderName = System.IO.Path.GetFileName(assetFolderPath);
+            AssetDatabase.CreateFolder(parentFolder, folderName);
+        }
 
-            // If prefab doesn't have LineRenderer, add it
-            if (lineRenderer == null)
+        // Create the conduit line set
+        ConduitLineSet conduitLineSet = ScriptableObject.CreateInstance<ConduitLineSet>();
+        conduitLineSet.referencePoint = referencePoint;
+        conduitLineSet.conduitLines = new List<ConduitLineSet.ConduitLineData>();
+
+        foreach (var conduit in conduits)
+        {
+            if (conduit.segment == null || conduit.segment.Count < 2)
             {
-                Debug.Log($"Adding LineRenderer component to prefab");
-                lineRenderer = lineObj.AddComponent<LineRenderer>();
+                Debug.LogWarning($"Skipping conduit {conduit.name} - insufficient segments ({conduit.segment?.Count ?? 0} segments)");
+                continue;
+            }
+
+            var conduitLineData = new ConduitLineSet.ConduitLineData
+            {
+                conduitName = conduit.name,
+                description = conduit.description ?? "",
+                lineColor = lineColor,
+                lineWidth = lineWidth,
+                worldPositions = new List<Vector3>()
+            };
+
+            // Convert GPS coordinates to world positions efficiently
+            foreach (var segment in conduit.segment)
+            {
+                try
+                {
+                    Vector3 worldPos = ConvertGPSToUnityPosition(segment.lat, segment.lng);
+                    conduitLineData.worldPositions.Add(worldPos);
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogError($"Error converting GPS to Unity position for conduit {conduit.name} at ({segment.lat}, {segment.lng}): {e.Message}");
+                }
+            }
+
+            if (conduitLineData.worldPositions.Count >= 2)
+            {
+                conduitLineSet.conduitLines.Add(conduitLineData);
+                Debug.Log($"Added conduit line '{conduit.name}' with {conduitLineData.worldPositions.Count} segments");
+            }
+            else
+            {
+                Debug.LogWarning($"Conduit {conduit.name} only has {conduitLineData.worldPositions.Count} valid positions - skipping");
             }
         }
-        else
-        {
-            Debug.Log($"Creating new GameObject for line renderer (no prefab found)");
-            // Create a GameObject for the line
-            lineObj = new GameObject($"ConduitLine_{conduit.name}");
-            lineRenderer = lineObj.AddComponent<LineRenderer>();
-        }
 
-        // Configure LineRenderer
-        if (lineRenderer.material == null)
-        {
-            lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        }
-        lineRenderer.material.color = lineColor;
-        lineRenderer.startWidth = lineWidth;
-        lineRenderer.endWidth = lineWidth;
-        lineRenderer.useWorldSpace = true;
-        lineRenderer.positionCount = conduit.segment.Count;
-
-
-        // Convert GPS coordinates to Unity positions
-        for (int i = 0; i < conduit.segment.Count; i++)
-        {
-            var segment = conduit.segment[i];
-            Vector3 worldPos = ConvertGPSToUnityPosition(segment.lat, segment.lng);
-            lineRenderer.SetPosition(i, worldPos);
-            Debug.Log($"Segment {i}: GPS({segment.lat}, {segment.lng}) -> Unity({worldPos.x}, {worldPos.y}, {worldPos.z})");
-        }
-
-        Debug.Log($"Successfully created line renderer for conduit: {conduit.name}");
-        return lineObj;
+        // Save the conduit line set asset
+        string conduitLineSetPath = $"{assetFolderPath}/{conduitLineSetName}_{System.DateTime.Now:yyyyMMdd_HHmmss}.asset";
+        AssetDatabase.CreateAsset(conduitLineSet, conduitLineSetPath);
+        
+        // Save and refresh
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+        
+        Debug.Log($"Created Conduit Line Set with {conduitLineSet.conduitLines.Count} conduit lines at: {conduitLineSetPath}");
+        return conduitLineSet;
+#else
+        Debug.LogWarning("Conduit Line Asset creation only works in the Unity Editor");
+        return null;
+#endif
     }
 
     // GPS to Unity position conversion using your existing pLab_GeoTools
@@ -556,7 +614,18 @@ public class POIData
     public GameObject canvasPrefab;
     public GameObject manholeCanvasPrefab;
     public GameObject conduitCanvasPrefab;
+    public List<Conduit> conduits;
 }
+
+// JSON data structures - exactly as you had them
+[System.Serializable]
+public class ConduitSegment
+{
+    public double lat;
+    public double lng;
+    public string notes;
+}
+
 [System.Serializable]
 public class Enclosure
 {
@@ -566,13 +635,14 @@ public class Enclosure
     public Directions directions;
     public string notes;
 }
+
 [System.Serializable]
 public class GPS_Coordinates
 {
     public double latitude;
     public double longitude;
-
 }
+
 [System.Serializable]
 public class Directions
 {
@@ -585,6 +655,23 @@ public class Directions
     public List<string> SouthEast;
     public List<string> SouthWest;
 }
+
+[System.Serializable]
+public class ConduitData
+{
+    public string name;             // Example: "Line 5"
+    public List<SegmentPoint> segment; // List of points forming the path
+}
+
+[System.Serializable]
+public class SegmentPoint
+{
+    public double lat;              // Latitude
+    public double lng;              // Longitude
+}
+
+// Note: JSONPOIData, Manhole, and Conduit classes should be defined elsewhere in your project
+// to avoid duplicate definitions. These are referenced but not defined here.
 
 public static class JsonHelper
 {
